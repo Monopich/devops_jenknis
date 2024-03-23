@@ -23,8 +23,10 @@ pipeline {
             }
         }
         stage('Email Notification!') {
-            mail bcc: '', body: '''Hello welcome to Jenkins email alerts
-            Thanks!''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'mailtrap@gmail.com'
+            step {
+                mail bcc: '', body: '''Hello welcome to Jenkins email alerts
+                Thanks!''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'mailtrap@gmail.com'
+            }
         }
     }
     

@@ -21,6 +21,7 @@ pipeline {
                 echo 'Testing feature...'
                 sh 'php artisan test'
             }
+        
         }
     }
     

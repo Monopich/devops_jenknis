@@ -22,6 +22,20 @@ pipeline {
                 sh 'php artisan test'
             }
         }
+        stage('Post-Build Actions') {
+            steps {
+                // Send email notification
+                mail(
+                    to: 'monopich1823@gmail.com',
+                    subject: 'Job $JOB_NAME - Build ${BUILD_NUMBER} - $currentBuild.result',
+                    body: """
+                        Build ${BUILD_NUMBER} of job $JOB_NAME has finished with result: ${currentBuild.result}
+
+                        Check the console output for details: ${BUILD_URL}console
+                    """
+                )
+            }
+        }
     }
     
 }

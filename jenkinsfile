@@ -23,7 +23,7 @@ pipeline {
             }
         }
         stage('Email Notification!') {
-            step {
+            steps{
                 mail bcc: '', body: '''Hello welcome to Jenkins email alerts
                 Thanks!''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'mailtrap@gmail.com'
             }

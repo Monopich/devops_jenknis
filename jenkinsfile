@@ -26,7 +26,8 @@ pipeline {
             }
         }
         
-        post{
+    }
+    post{
             success{
                 sh '''
                 sh 1-success-deploy.sh;\
@@ -37,7 +38,6 @@ pipeline {
                 sh 2-fail-deploy.sh;\
                 '''
             }
-        }
     }
 
 }

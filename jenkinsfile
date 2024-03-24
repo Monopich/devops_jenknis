@@ -1,8 +1,8 @@
 pipeline {
     agent any // window agent, Jenkins-laravel (other machine)
     environment {
-        BOT_TOKEN = credentials('BOT_TOKEN')
-        CHAT_ID = credentials('CHAT_ID')
+        BOT_TOKEN = 6853243184:AAF2zVn5Q_bWzgjmAERZjLJp-WEVfMczzDA
+        CHAT_ID = -1002012810646
     }
     stages {
         stage('Fetch from GitHub') { //build steps
